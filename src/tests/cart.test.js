@@ -1,5 +1,5 @@
 const request = require("supertest")
-const app = require('../../app')
+const app = require('../app')
 const Product = require("../models/Product")
 require("../models")
 
@@ -12,8 +12,8 @@ let cartId
 
 beforeAll(async()=>{
     const user = {
-        email: "agustin@gmail.com",
-        password: "agustin1234"
+        email: "walter_cp_96@hotmail.com",
+        password: "7916161"
     }
 
     const res = await request(app)

@@ -7,8 +7,8 @@ let userId
 
 beforeAll(async()=>{
     const user = {
-        email: "agustin@gmail.com",
-        password: "agustin1234"
+        email: "walter_cp_96@hotmail.com",
+        password: "7916161"
     }
 
     const res = await request(app)
@@ -28,11 +28,11 @@ test("GET -> 'URL_BASE', should return status code 200 and res.body to have leng
 
 test("POST -> 'URL_BASE' should return status code 201 and res.body.firstName === body.firstName", async()=>{
     const userCreate = {
-        firstName: "Daniela",
-        lastName: "Soledad",
-        email: "daniela@gmail.com",
-        password: "daniela1234",
-        phone: "+12345"
+        firstName: "Walter",
+        lastName: "Camacho",
+        email: "waltercamachopa@gmail.com",
+        password: "7916161",
+        phone: "936495254"
     }
 
     const res = await request(app)
@@ -47,7 +47,7 @@ test("POST -> 'URL_BASE' should return status code 201 and res.body.firstName ==
 
 test("PUT -> 'BASE_URL/:id', should return status code 200 and res.body.firstName = body.firstName", async()=>{
     const userUpdate = {
-        firstName: "Daniela"
+        firstName: "Walter"
     }
 
     const res = await request(app)
@@ -62,8 +62,8 @@ test("PUT -> 'BASE_URL/:id', should return status code 200 and res.body.firstNam
 
 test("POST 'BASE_URL/login', should return status code 200 res.body.email === body.email and token defined", async()=>{
     const userLogin = {
-        email: "daniela@gmail.com",
-        password: "daniela1234",
+        email: "waltercamachopa@gmail.com",
+        password: "7916161",
     }
 
     const res = await request(app)
@@ -77,7 +77,7 @@ test("POST 'BASE_URL/login', should return status code 200 res.body.email === bo
 
 test("POST 'BASE_URL/login', should return status code 401", async()=>{
     const userLogin = {
-        email: "daniela@gmail.com",
+        email: "waltercamachopa@gmail.com",
         password: "invalid password",
     }
 

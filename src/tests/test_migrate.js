@@ -1,5 +1,5 @@
-const sequelize = require('../../utils/connection');
-const user = require('./user');
+const sequelize = require('../utils/connection');
+const user = require('./createData/user');
 require("../models")
 
 const main = async() => {
