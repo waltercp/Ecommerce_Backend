@@ -1,12 +1,13 @@
 const catchError = require('../utils/catchError');
-const ProductImg = require('../models/ProductImg');
-
-const { uploadToCloudinary, deleteFromCloudinary } = require('../utils/cloudinary');
+const ProductImg = require('../models/ProductImg');const { uploadToCloudinary, deleteFromCloudinary } = require('../utils/cloudinary');
 
 const getAll = catchError(async(req, res) => {
     const result = await ProductImg.findAll()
     return res.json(result)
 });
+
+
+
 
 const create = catchError(async(req, res) => {
     const { path, filename } = req.file;
@@ -15,6 +16,8 @@ const create = catchError(async(req, res) => {
     const image = await ProductImg.create(body);
     return res.status(201).json(image);
 });
+
+
 
 const remove = catchError(async(req, res) => {
     const { id } = req.params;
