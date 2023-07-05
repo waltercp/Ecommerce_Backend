@@ -1,6 +1,6 @@
 const { getAll, create, remove, update } = require('../controllers/cart.controllers');
 const express = require('express');
-const verifyJWT = require("../utils/verifyJWT")
+const verifyJWT = require("../utils/hola")
 
 const routerCart = express.Router();
 
